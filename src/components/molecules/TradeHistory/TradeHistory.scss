@@ -1,0 +1,23 @@
+@import 'utils';
+.trade-history {
+  margin-bottom: 5rem;
+  // margin-top: 1rem;
+  display: flex;
+  // width: calc(50%);
+  flex-direction: row;
+  @include media("<medium") {
+    // width: calc(100%);
+    flex-direction: column;
+  }
+  .column {
+    flex: 1;
+  }
+  .column + .column {
+    @include media(">=medium") {
+      margin-left: 1rem;  
+    }
+    @include media("<medium") {
+      margin-top: 1rem;
+    }    
+  }
+}

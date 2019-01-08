@@ -1,0 +1,78 @@
+@import 'utils';
+
+.wrapper {
+  padding: 0.5rem;
+  width: calc(100%);
+  @include media("<small") {
+    width: 100%;
+  }
+  .bitcoin-info-list {
+    background: material-color('grey', '100');
+    border: 1px solid transparent;
+    &.green {
+      border: 1px solid material-color('green', '300');
+      background: material-color('green', '50')
+    }
+    &.red {
+      border: 1px solid material-color('red', '300');
+      background: material-color('red', '50');
+    }
+    cursor: pointer;
+    @include material-shadow(1, 0.25);
+    &:hover {
+      @include material-shadow(2, 0.5);
+    }
+
+    margin: 0 auto;
+    padding: 2.5rem;
+    padding-bottom: 3.5rem;
+    @media (max-width:655px) {
+      padding-bottom: 4.5rem;
+    }
+    @media (max-width:425px) {
+      padding-bottom: 6.0rem;
+    }
+
+    .left-items {
+      float: left;
+      .bitcoin {
+        align-items: center;
+        font-weight: 800;
+        font-size: 2.0rem;
+      }
+      .percentage {
+        margin-top: 0.5rem;
+        text-align: center;
+        font-size: 1.25rem;
+        color: material-color('red', '600');
+        &.positive {
+          color: material-color('green', '600');
+        }
+        &.neutral {
+          color: material-color('grey', '600');
+        }
+      }
+    }
+    .right-items{
+      float:right;
+      .usd {
+        margin-top: 0.25rem;
+        text-align: center;
+        font-weight: 800;
+        font-size: 2.0rem;
+        min-height: 2.0rem;
+      }
+      .krw {
+        text-align: right;
+        font-size: 1.25rem;
+        color: material-color('grey', '800');
+      }
+      .name {
+        text-align: right;
+        font-size: 1.25rem;
+        color: material-color('grey', '500');
+      }
+    }
+    
+  }
+}

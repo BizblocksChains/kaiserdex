@@ -1,0 +1,64 @@
+@import 'utils';
+.trade-section {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+  @include media("<medium") {
+    flex-direction: column;
+  }
+  
+  .tabs {
+    // width: calc(100%);
+    // @include media("<medium") {
+    //     width: calc(50%);
+    //     flex-direction: column;
+    // }
+    //display: inline-block;
+    //margin-right: 30px;
+    //vertical-align: top;
+
+    .tab-links {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #CCC;
+        // border-bottom: 1px solid #868686;
+        // border-top-left-radius: 5px;
+        // border-top-right-radius: 5px;
+        // height: 35px;
+        position: relative;
+        // top: 5px;
+    }
+  
+    .tab-link {
+        padding: 0 15px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 60px;
+        font-size: 1.5rem;
+        // line-height: 41px;
+        // top: -6px;
+        // left: -1px;
+    }
+  
+    .tab-link-active {
+        font-weight: bold;
+        border: 1px solid #868686;
+        border-bottom: 1px solid white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: white;
+    }
+  
+    .content {
+        // padding: 15px;
+        // border: 1px solid #868686;
+        // border-top: 1px solid transparent;
+    }
+
+  } 
+
+
+}

@@ -1,0 +1,20 @@
+@import 'utils';
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: material-color('grey', '900'); // #111
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all .2s;
+  user-select: none;
+  &:hover {
+    font-weight: 700;
+    opacity: 1;
+  }
+}

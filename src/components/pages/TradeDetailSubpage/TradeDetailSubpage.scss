@@ -1,0 +1,40 @@
+@import 'utils';
+
+.ad-area {
+  margin-top: 1rem;
+}
+
+.trade-detail-subpage{
+  .section{
+    display: flex;
+    @include media("<medium") {
+     display: inline-block;
+    }
+    .section-trade {
+      margin-left: 1.0rem;
+      // @include media("<medium") {
+      //   margin-left: 0;
+      // }
+    }
+  }
+
+  .section-first{
+
+  }
+  .section-second{
+    
+  }
+  .section-third{    
+    display: flex;
+    .section-third-one{
+      
+    }
+    .section-third-two{
+      
+    }
+  }
+}
+
+.trade-index-subpage {
+  
+}

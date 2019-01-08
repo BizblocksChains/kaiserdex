@@ -1,0 +1,47 @@
+@import 'utils';
+
+.header {
+  height: 8.0rem;
+  &.solid {
+    background: white;
+    // background: linear-gradient(to right, (material-color('orange', '800')), (material-color('orange', '600')));
+  }
+  transition: all 0.3s ease-in;
+  &.shadow {
+    background: white;
+    // background: linear-gradient(to right, (material-color('orange', '800')), (material-color('orange', '600')));
+    @include material-shadow(2, 0.75);
+  }
+  // background: material-color('orange', '600');
+  .responsive {
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include responsive();
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .right-side {
+      .desktop-only {
+        display: flex;
+        @include media("<medium") {
+          display: none;
+        }
+      }
+      .mobile-only {
+        @include media(">=medium") {
+          display: none;
+        }
+      }
+      margin-left: auto;
+    }
+  }
+
+  .login-button {
+    margin-left: 1rem;
+    &:hover {
+      color: material-color('orange', '500');
+    }
+  }
+}
